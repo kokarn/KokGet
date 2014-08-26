@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            KokGet
+        </title>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/bootswatch/3.2.0.1/superhero/bootstrap.min.css">
+        <link rel="stylesheet" href="design/style.css">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <div class="container">
+                <form role="form" class="js-search-form" autocomplete="off">
+                    <div class="form-group">
+                        <input type="text" class="form-control js-search-field" id="search" placeholder="Title..." tabindex="0">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="results-wrapper movie-results-wrapper js-movie-results-wrapper">
+            <h2>
+                Movies
+            </h2>
+        </div>
+        <div class="results-wrapper tv-results-wrapper js-tv-results-wrapper">
+            <h2>
+                TV Shows
+            </h2>
+        </div>
+        <script src="//cdn.jsdelivr.net/g/jquery@2.1.1,underscorejs@1.6.0,jquery.velocity@0.11.9"></script>
+        <script src="scripts/velocity.ui.js"></script>
+        <script src="scripts/tmdb.js"></script>
+        <script src="scripts/flexget.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
