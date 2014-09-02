@@ -6,15 +6,15 @@
         movieTemplate : '<div class="result-wrapper" data-tmdb-id="<%= id %>">' +
                     '<img src="https://image.tmdb.org/t/p/w92/<%= poster_path %>" onerror="this.src=\'design/broken.jpg\';">' +
                     '<h3><%= title %></h3>' +
-                    '<small><%= release_date %></small>' +
+                    '<small>Released <%= release_date %></small>' +
                     '<div class="add-to-list-overlay">' +
-                    '<button class="info add-to-list-button">Add to list</button>' +
+                    '<button class="info add-to-list-button ladda-button" data-style="zoom-out" data-spinner-size="50">Add to list</button>' +
                     '</div>' +
                     '</div>',
         tvTemplate : '<div class="result-wrapper" data-tmdb-id="<%= id %>">' +
                     '<img src="https://image.tmdb.org/t/p/w92/<%= poster_path %>" onerror="this.src=\'design/broken.jpg\';">' +
                     '<h3><%= name %></h3>' +
-                    '<small><%= first_air_date %></small>' +
+                    '<small>First aired <%= first_air_date %></small>' +
                     '<div class="add-to-list-overlay">' +
                     '<button class="info add-to-list-button">Add to list</button>' +
                     '</div>' +
@@ -108,6 +108,10 @@
                         break;
                 }
             });
+
+            Ladda.bind( 'button', {
+                timeout: 1000
+            } );
 
             if( hasMovie ) {
                 $movieTarget

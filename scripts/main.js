@@ -7,7 +7,7 @@
         });
 
         $( 'body' ).on( 'click touchstart', '.add-to-list-button', function( event ){
-            event.preventDefault();
+            //event.preventDefault();
             flexget.addMovie( $( this ).parents( '.result-wrapper' ).data( 'tmdb-id' ) );
         } );
 
